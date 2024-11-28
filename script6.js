@@ -80,3 +80,111 @@
 // users.shift()
 // console.log(users);
 // console.log(students);
+
+// Перебор массива
+
+// let students = [
+//     'Kamil', 
+//     'Bogdan', 
+//     'Adelina', 
+//     "Elena", 
+//     'Maxim'
+// ]
+// for(let i=0 ; i<students.length; i++){ //часто
+//     console.log(students[i]);    
+// }
+// for(let user of students){  // редко
+//     alert(user)
+// }
+// for(let key in students){   //не использовать!!!
+//     alert(user)
+// }
+
+//let a = []
+// console.log(a.length);
+//a[5] = 'ddd'
+// console.log(a.length);
+//for(let i=0 ; i<a.length; i++){ //часто
+//    console.log(i);
+//     console.log(a[i]);    
+// }
+
+// let students = [
+//     'Kamil', 
+//     'Bogdan', 
+//     'Adelina', 
+//     "Elena", 
+//     'Maxim'
+// ]
+// students.length = 3
+// console.log(students);
+
+// let matrix = [  // многомерный массив
+//     [1,2,3],
+//     [4,5,6],
+//     [7,8,9],
+// ]
+
+// Splice
+// let students = [
+//     'Kamil', 
+//     'Bogdan', 
+//     'Adelina',
+//     "Elena", 
+//     'Maxim' 
+// ]
+
+// students.splice(2, 0, 'Булат', 'Ильдар')
+// console.log(students);
+// console.log(students.length);
+
+// Slice
+// let students = [
+//     'Kamil', 
+//     'Bogdan', 
+//     'Adelina',
+//     "Elena", 
+//     'Maxim' 
+// ]
+
+// let students2 = students.slice(1, 3) //1 с какого индекса
+// console.log(students2);              //3 по какой индекс (не включая)
+// console.log(students2.length);
+
+//concat
+// let arr = [1, 2]
+// console.log(arr.concat([3,4]));
+// console.log(arr.concat([3,4], 5, 6));
+
+//forEach
+// let students = [
+//     'Kamil', 
+//     'Bogdan', 
+//     'Adelina',
+//     "Elena", 
+//     'Maxim' 
+// ]
+// students.forEach( (st) => { console.log(`Привет ${st}`)})
+
+// Поиск в массиве indexOf lastindexOf includes
+let students = [
+    'Kamil', 
+    'Bogdan2', 
+    'Adelina',
+    "Elena", 
+    'Maxim',
+    'Bogdan2' 
+]
+console.log(students.indexOf('Bogdan2'));
+console.log(students.lastIndexOf('Bogdan2'));
+// console.log(students.indexOf('Adelina'));
+// console.log(students.indexOf('Rustam'));// -1 если нэту
+console.log(students.includes('Bogdan2')); //true
+console.log(students.includes('Lera')); //false
+
+
+
+
+
+
+
