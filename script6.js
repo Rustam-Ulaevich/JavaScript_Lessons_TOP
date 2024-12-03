@@ -167,20 +167,78 @@
 // students.forEach( (st) => { console.log(`Привет ${st}`)})
 
 // Поиск в массиве indexOf lastindexOf includes
-let students = [
-    'Kamil', 
-    'Bogdan2', 
-    'Adelina',
-    "Elena", 
-    'Maxim',
-    'Bogdan2' 
+// let students = [
+//     'Kamil', 
+//     'Bogdan2', 
+//     'Adelina',
+//     "Elena", 
+//     'Maxim',
+//     'Bogdan2' 
+// ]
+// console.log(students.indexOf('Bogdan2'));
+// console.log(students.lastIndexOf('Bogdan2'));
+// // console.log(students.indexOf('Adelina'));
+// // console.log(students.indexOf('Rustam'));// -1 если нэту
+// console.log(students.includes('Bogdan2')); //true
+// console.log(students.includes('Lera')); //false
+
+
+// Find
+
+// let users = [
+//     {id: 1, name: 'Камиль'},
+//     {id: 2, name: 'Булат'},
+//     {id: 3, name: 'Аделина'},
+//     {id: 4, name: 'Регина'},
+//     {id: 5, name: 'Булат'},   
+// ]
+
+// let user = users.find( item => item.name == 'Булат')
+
+// console.log(user.id);
+
+// Filter
+
+// let users = [
+//     {id: 1, name: 'Камиль', sex: 'man', age: 19},
+//     {id: 2, name: 'Булат', sex: 'man', age: 34},
+//     {id: 3, name: 'Аделина', sex: 'woman', age: 15},
+//     {id: 4, name: 'Регина', sex: 'woman', age: 31},
+//     {id: 5, name: 'Богдан', sex: 'man', age: 21},   
+// ]
+
+// //let sayna = users.filter( m => m.sex === 'man')
+// let ageOld = users.filter( a => a.adress.city === 18)
+
+// // console.log(users);
+// // console.log(sayna);
+// console.log(ageOld);
+
+// Map
+
+let users = [
+    {id: 1, name: 'Камиль', sex: 'man', age: 19},
+    {id: 2, name: 'Булат', sex: 'man', age: 34},
+    {id: 3, name: 'Аделина', sex: 'woman', age: 15},
+    {id: 4, name: 'Регина', sex: 'woman', age: 31},
+    {id: 5, name: 'Богдан', sex: 'man', age: 21},   
 ]
-console.log(students.indexOf('Bogdan2'));
-console.log(students.lastIndexOf('Bogdan2'));
-// console.log(students.indexOf('Adelina'));
-// console.log(students.indexOf('Rustam'));// -1 если нэту
-console.log(students.includes('Bogdan2')); //true
-console.log(students.includes('Lera')); //false
+
+
+let usersNew = users.map( u => (
+    u.name == 'Камиль' ?
+    u :
+    {...u, age: u.age + 1}
+))
+
+
+console.log(users);
+console.log(usersNew);
+
+
+
+
+
 
 
 
