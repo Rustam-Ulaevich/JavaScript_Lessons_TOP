@@ -216,24 +216,24 @@
 
 // Map
 
-let users = [
-    {id: 1, name: 'Камиль', sex: 'man', age: 19},
-    {id: 2, name: 'Булат', sex: 'man', age: 34},
-    {id: 3, name: 'Аделина', sex: 'woman', age: 15},
-    {id: 4, name: 'Регина', sex: 'woman', age: 31},
-    {id: 5, name: 'Богдан', sex: 'man', age: 21},   
-]
+// let users = [
+//     {id: 1, name: 'Камиль', sex: 'man', age: 19},
+//     {id: 2, name: 'Булат', sex: 'man', age: 34},
+//     {id: 3, name: 'Аделина', sex: 'woman', age: 15},
+//     {id: 4, name: 'Регина', sex: 'woman', age: 31},
+//     {id: 5, name: 'Богдан', sex: 'man', age: 21},   
+// ]
 
 
-let usersNew = users.map( u => (
-    u.name == 'Камиль' ?
-    u :
-    {...u, age: u.age + 1}
-))
+// let usersNew = users.map( u => (
+//     u.name == 'Камиль' ?
+//     u :
+//     {...u, age: u.age + 1}
+// ))
 
 
-console.log(users);
-console.log(usersNew);
+// console.log(users);
+// console.log(usersNew);
 
 
 
