@@ -1,61 +1,82 @@
 const formElement = document.querySelector('form')
 
-formElement.addEventListener('submit', async(event) => {  // в конце добавить 
-    event.preventDefault()    
+formElement.addEventListener('submit', async(event) => {
+    event.preventDefault()
 
-    // const formData = {}
+    // const formData = {}    // Создали пустой объект для будущих значений формы
 
-    // for (let element of formElement.elements){
+    // for(data of formElement.elements){    //создали цикл for of для перебора пар
 
-    //   if(!element.name){
-    //     continue
-    //   }
+    //     if(!data.name){         // проверка на пустой name и значение
+    //         continue
+    //     }
+    //     if(data.type === 'checkbox'){   // проверка, изменение на булевое значение
+    //         formData[data.name] = data.checked  // checked возвращает true или false
+    //         continue                    // используется в циклах для пропуска итерации в цикле. 
+    //     }
+    //     if(data.type === 'radio' && !data.checked){ //
+    //         debugger
+    //         continue
+    //     }
 
-    //   if( element.type === 'checkbox' ){
-    //     formData[element.name] = element.checked
-    //     continue
-    //   }
-
-    //   if( element.type === 'radio' && !element.checked ){
-    //     continue
-    //   }
-
-    //   formData[element.name] = element.value
+    //     formData[data.name] = data.value
     // }
 
-    // console.log('formData :', formData);
+    const formData = new FormData(formElement)  // готовый метод для создания объекта формы
 
-
-
-    const formData = new FormData(formElement)
-
-    for(data of formData){
-        console.log(data);        
+    for(data of formData){  // вывод значений формы через цикл 
+        //console.log(data);        
     }
 
-    console.log('formData :', formData);
+    const password = formData.get('password') // в переменнную сохраняем конкретное значение из формы
+    // console.log(password);
 
-    // можно найти конкретное значение
-    const content = formData.get('password')
-    console.log(content);
+    const formDataAsObject = Object.fromEntries(formData) // отображение значений формы в виде объекта
+    // console.log(formDataAsObject);
 
-    const formDataAsObject = Object.fromEntries(formData) // 3 для обычного отображения как объект
-    console.log(formDataAsObject);
-    
+    formData.set('user', 'Rustam') //Добавление нового значения
+    formData.delete('gender') //удаление значения
 
-    formData.set('user', 'New user name')// 2 можно добавить новое значение
-    formData.delete('about')             // 2 удаление значения
-
-
-    await fetch('http://localhost:3000/css', { // 1 при помощи встроенного api fetch отправим тестовый запрос
+    await fetch('https://localhost:3000/form', {
         method: 'POST',
         body: formData
     })
     
 
 
-
+    
+  
+    console.log(formData);
+    
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

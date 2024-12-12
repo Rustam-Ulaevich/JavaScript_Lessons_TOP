@@ -12,10 +12,15 @@
 
 // task1
 
-// function sayError(){
-//     alert(letter)
-// }
-// sayError()
+function sayError(){
+    alert(letter)
+
+
+
+
+    
+}
+sayError()
 
 
 // 2task
