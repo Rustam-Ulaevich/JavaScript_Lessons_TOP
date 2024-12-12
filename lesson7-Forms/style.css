@@ -15,9 +15,9 @@ form {
   max-width: 300px;
   margin: 30px;
   padding: 20px;
-  border: 6px solid coral;
+  border: 3px solid coral;
   background-color: cornsilk;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 
 input,
@@ -25,7 +25,7 @@ button,
 fieldset,
 select,
 textarea {
-  border: 3px solid darksalmon;
+  border: 2px solid darksalmon;
   border-radius: 5px;
   transition-duration: 0.2s;
 }
